@@ -53,12 +53,12 @@ def lambda_handler(event, context):
                 'color': color
             }
         ]
-        sc.api_call('chat.postMessage',
+        ret = sc.api_call('chat.postMessage',
                     channel=inifile.get('slack', 'channel'),
                     attachments=json.dumps(attachments),
                     username=inifile.get('slack', 'username'),
                     icon_emoji=inifile.get('slack', 'icon_emoji'))
-        print('sended to slack')
+        print(ret)
 
     print('last_id: {0}'.format(last_id))
     if last_id > previous_last_id:
