@@ -1,0 +1,14 @@
+[appstore]
+app_id =
+country =
+
+[slack]
+token =
+username = lambda_bot
+channel =
+icon_url =
+icon_emoji = :slack:
+
+[dynamodb]
+table_id = lambda_ids
+id_value = 1
